@@ -13,11 +13,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 typedef struct s_ops
 {
@@ -52,13 +50,6 @@ typedef struct s_info
 	char	*stg;
 	double	disordr;
 }	t_info;
-
-typedef struct s_bench
-{
-	double	disorder;
-	char	*strategy;
-	char	*complexity;
-}	t_bench;
 
 void	sa(int *A, int *size_a, t_ops *ops);
 void	sb(int *B, int *size_b, t_ops *ops);
@@ -100,7 +91,6 @@ int		dup_check(int *A, int size);
 
 int		counting(int *A, int *size_a);
 double	disorder(int *A, int *size_a);
-char	*get_stg(double disorder);
 char	*get_complexity(double disorder);
 int		get_bench_strategy(int ac, char **av);
 int		get_strategy(int ac, char **av);
@@ -125,7 +115,6 @@ int		parsing_helper(t_stack *stack, char **split, int *i, int *error);
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 #endif

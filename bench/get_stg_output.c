@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 int	counting(int *A, int *size_a)
@@ -49,19 +47,6 @@ double	disorder(int *A, int *size_a)
 	max_inversions = *size_a * (*size_a - 1) / 2;
 	disorder = inversions / max_inversions;
 	return (disorder);
-}
-
-char	*get_stg(double disorder)
-{
-	char	*stg;
-
-	if (disorder < 0.2)
-		stg = "simple";
-	else if (disorder < 0.5)
-		stg = "medium";
-	else
-		stg = "complex";
-	return (stg);
 }
 
 char	*get_complexity(double disorder)

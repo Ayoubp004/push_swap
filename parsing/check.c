@@ -86,7 +86,7 @@ int	is_sorted(int *A, int *size_a)
 	int	is_sorted;
 
 	i = 0;
-	is_sorted = 0;
+	is_sorted = 1;
 	while (i < *size_a - 1)
 	{
 		if (A[i] > A[i + 1])

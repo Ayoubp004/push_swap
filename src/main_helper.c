@@ -63,7 +63,7 @@ void	get_s_c(int strategy, char **stg, char **complexity, double disordr)
 	}
 	else if (strategy == 4 || strategy == 6 || strategy == 7)
 	{
-		*stg = get_stg(disordr);
+		*stg = "adaptive";
 		*complexity = get_complexity(disordr);
 	}
 }
