@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 void	ft_putdouble_fd(double n, int fd)
 {
@@ -48,6 +48,15 @@ static	int	parsing(int	*error, int digits, long result, int sign)
 	return (1);
 }
 
+static int	get_sign(char *str, int a, int i, int sign)
+{
+	if (str[i] == '-' && a == 0)
+			sign = -1;
+		else if (str[i] == '+' && a == 0)
+			sign = 1;
+	return (sign);
+}
+
 int	atoi_plus(char *str, int *error)
 {
 	long	result;
@@ -62,9 +71,8 @@ int	atoi_plus(char *str, int *error)
 	result = 0;
 	while (str[i])
 	{
-		if (str[i] == '-' && a == 0)
-			sign = -1;
-		else if (str[i] >= '0' && str[i] <= '9')
+		sign = get_sign(str, a, i, sign);
+		if (str[i] >= '0' && str[i] <= '9')
 		{
 			digits = str[i] - '0';
 			if (parsing(error, digits, result, sign) == 0)

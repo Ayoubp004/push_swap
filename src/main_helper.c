@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 int	get_start(int ac, char **av, int strategy)
 {
@@ -68,7 +68,7 @@ void	get_s_c(int strategy, char **stg, char **complexity, double disordr)
 	}
 }
 
-int	helper(t_stack *stack, int strategy, int size)
+int	run_selected_sort(t_stack *stack, int strategy, int size)
 {
 	if (strategy == 1)
 	{
@@ -99,7 +99,7 @@ int	sort_size(t_stack *stack, int strategy, int size)
 		sort_four(stack);
 	else if (size > 4)
 	{
-		result = helper(stack, strategy, size);
+		result = run_selected_sort(stack, strategy, size);
 		if (result == 0)
 			return (0);
 	}

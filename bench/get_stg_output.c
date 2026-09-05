@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "push_swap.h"
 
 int	counting(int *A, int *size_a)
 {
@@ -74,9 +74,11 @@ int	get_bench_strategy(int ac, char **av)
 		return (3);
 	else if (ft_strcmp(av[2], "--adaptive") == 0)
 		return (4);
-	else if ((av[2][0] >= '0' && av[2][0] <= '9') || av[2][0] == '-')
+	else if ((av[2][0] >= '0' && av[2][0] <= '9')
+		|| av[2][0] == '+' || av[2][0] == '-')
 	{
-		if (av[2][0] == '-' && !(av[2][1] >= '0' && av[2][1] <= '9'))
+		if ((av[2][0] == '-' || av[2][0] == '+' )
+			&& !(av[2][1] >= '0' && av[2][1] <= '9'))
 			return (5);
 		return (7);
 	}

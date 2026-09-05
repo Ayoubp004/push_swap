@@ -305,7 +305,7 @@ chmod +x test.sh
 .
 |-- Makefile
 |-- README.md
-|-- libft.h
+|-- push_swap.h
 |-- src/        main program and high-level helpers
 |-- operations/ Push_swap operations and chunk helpers
 |-- sort/       sorting strategies and movement helpers

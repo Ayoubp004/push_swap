@@ -22,7 +22,7 @@ FILES = libft/ft_putchar_fd.c libft/ft_putnbr_fd.c libft/ft_putstr_fd.c \
 		operations/rrb.c operations/ss.c operations/rr.c operations/rrr.c \
 		operations/op_helper.c sort/strategy.c src/main.c parsing/check.c \
 		sort/find_move.c sort/Adaptive.c src/main_helper.c parsing/free.c \
-		sort/helper.c libft/ft_split.c
+		sort/helper.c sort/linear_sort.c libft/ft_split.c
 
 OFILES = $(FILES:.c=.o)
 

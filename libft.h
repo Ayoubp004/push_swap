@@ -100,7 +100,7 @@ void	bench(int ac, char **av, t_info *info, t_ops *ops);
 int		get_start(int ac, char **av, int strategy);
 void	get_error(int *A, int *B);
 void	get_s_c(int strategy, char **stg, char **complexity, double disordr);
-int		helper(t_stack *stack, int strategy, int size);
+int		run_selected_sort(t_stack *stack, int strategy, int size);
 int		sort_size(t_stack *stack, int strategy, int size);
 void	init_info(t_info *info, t_stack *stack, int strategy);
 

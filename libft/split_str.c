@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 int	split_str(char **split)
 {
@@ -23,7 +23,7 @@ int	split_str(char **split)
 	while (split[i])
 	{
 		j = 0;
-		if (split[i][j] == '-')
+		if (split[i][j] == '-' || split[i][j] == '+')
 		{
 			j++;
 			if (split[i][j] == 0)

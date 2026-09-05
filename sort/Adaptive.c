@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 void	simple_sort(t_stack *stack)
 {
@@ -90,7 +90,7 @@ int	adaptive(t_stack *stack, int size)
 	disordr = disorder(stack->a, &stack->size_a);
 	if (disordr < 0.2)
 	{
-		simple_sort(stack);
+		linear_sort(stack);
 		a = 1;
 	}
 	else if (disordr < 0.5)
