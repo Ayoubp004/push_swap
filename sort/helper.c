@@ -51,9 +51,9 @@ static	int	parsing(int	*error, int digits, long result, int sign)
 static int	get_sign(char *str, int a, int i, int sign)
 {
 	if (str[i] == '-' && a == 0)
-			sign = -1;
-		else if (str[i] == '+' && a == 0)
-			sign = 1;
+		sign = -1;
+	else if (str[i] == '+' && a == 0)
+		sign = 1;
 	return (sign);
 }
 
