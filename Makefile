@@ -16,13 +16,14 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -I.
 
 FILES = libft/ft_putchar_fd.c libft/ft_putnbr_fd.c libft/ft_putstr_fd.c \
-		libft/split_str.c bench/get_stg_output.c bench/get_stg_output2.c \
-		bench/bench.c operations/sa.c operations/sb.c operations/pb.c \
-		operations/pa.c operations/ra.c operations/rra.c operations/rb.c \
-		operations/rrb.c operations/ss.c operations/rr.c operations/rrr.c \
-		operations/op_helper.c sort/strategy.c src/main.c parsing/check.c \
-		sort/find_move.c sort/Adaptive.c src/main_helper.c parsing/free.c \
-		sort/helper.c sort/linear_sort.c libft/ft_split.c
+		libft/ft_strcmp.c parsing/parse_numbers.c bench/get_strat_output.c \
+		bench/strategy_parser.c bench/bench_display.c operations/sa.c \
+		operations/sb.c operations/pb.c operations/pa.c operations/ra.c \
+		operations/rra.c operations/rb.c operations/rrb.c operations/ss.c \
+		operations/rr.c operations/rrr.c sort/chunk_sort.c sort/small_sort.c \
+		src/main.c parsing/check.c sort/sort_moves.c sort/sort_strategies.c \
+		src/sort_dispatch.c src/sort_runner.c parsing/parse_utils.c \
+		sort/linear_sort.c libft/ft_split.c
 
 OFILES = $(FILES:.c=.o)
 
